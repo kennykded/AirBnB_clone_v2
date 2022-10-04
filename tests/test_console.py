@@ -285,7 +285,7 @@ class TestConsole(unittest.TestCase):
             self.consol.onecmd("User.update(" + id + ", name)")
             self.assertEqual(
                 "** value missing **\n", f.getvalue())
-                
+
 
 if __name__ == "__main__":
     unittest.main()
