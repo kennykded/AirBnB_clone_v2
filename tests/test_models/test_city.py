@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+
 """test for city"""
 import unittest
 import os

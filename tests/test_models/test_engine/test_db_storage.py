@@ -103,5 +103,6 @@ class TestDBStorage(unittest.TestCase):
         obj.reload()
         self.assertTrue(obj._DBStorage__session is not None)
 
+
 if __name__ == "__main__":
     unittest.main()

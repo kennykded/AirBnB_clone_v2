@@ -97,5 +97,6 @@ class TestBaseModel(unittest.TestCase):
         base_dict = self.base.to_dict()
         self.assertFalse('_sa_instance_state' in base_dict.keys())
 
+
 if __name__ == "__main__":
     unittest.main()
