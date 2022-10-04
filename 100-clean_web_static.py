@@ -7,6 +7,7 @@ from fabric.api import local
 from fabric.operations import env, put, run
 
 env.hosts = ['3.234.246.28', '34.229.62.188']
+env.user = "ubuntu"
 
 
 def do_pack():
@@ -17,7 +18,7 @@ def do_pack():
               format(time.strftime("%Y%m%d%H%M%S")))
         return ("versions/web_static_{}.tgz".format(time.
                                                     strftime("%Y%m%d%H%M%S")))
-    except:
+    except Exception:
         return None
 
 
@@ -39,7 +40,7 @@ def do_deploy(archive_path):
         run("ln -s {} /data/web_static/current".format(folder))
         print("Deployment done")
         return True
-    except:
+    except Exception:
         return False
 
 
@@ -48,7 +49,7 @@ def deploy():
     try:
         path = do_pack()
         return do_deploy(path)
-    except:
+    except Exception:
         return False
 
 
